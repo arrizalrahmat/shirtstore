@@ -9,6 +9,9 @@ const client = new Client({
     connectionTimeoutMillis: 5000,
     idleTimeoutMillis: 2000,
     max: 200,
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 
 client.connect()
