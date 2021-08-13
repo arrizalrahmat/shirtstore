@@ -5,10 +5,7 @@ const pool = new Pool({
     port: 5432,
     database: 'dddc5slfjk0sj',
     user: 'lpaguthtnfozff',
-    password: '89393c66e789c2c7954efde235a9a64a8a9964fa21dde562a69417346d48c1f5',
-    connectionTimeoutMillis: 5000,
-    idleTimeoutMillis: 2000,
-    max: 200,
+    password: '89393c66e789c2c7954efde235a9a64a8a9964fa21dde562a69417346d48c1f5'
 });
 
 module.exports = pool;
