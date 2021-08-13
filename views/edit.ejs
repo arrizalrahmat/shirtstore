@@ -1,0 +1,76 @@
+<%- include('partials/header', { title: "Edit shirt" }) %>
+  <div class="form-container pb-5 mb-2">
+    <% if (alert) { %>
+      <div class="alert alert-danger" role="alert">
+        <%= alert %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% } %>
+    <form action="/shirts/edit/<%= data.id %>" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input value="<%= data.name %>" name="name" type="text" class="form-control" id="name" placeholder="e.g: Kaos Polo Garis">
+      </div>
+      <div class="form-group">
+        <label for="type">Type</label>
+        <select name="type" class="form-control" id="type">
+          <option disabled>--Select Type--</option>
+          <% if (data.type === 'Casual') { %>
+            <option selected>Casual</option>
+          <% } else { %>
+            <option>Casual</option>
+          <% } %>
+          <% if (data.type === 'Dress') { %>
+            <option selected>Dress</option>
+          <% } else { %>
+            <option>Dress</option>
+          <% } %>
+          <% if (data.type === 'T-Shirt') { %>
+            <option selected>T-Shirt</option>
+          <% } else { %>
+            <option>T-Shirt</option>
+          <% } %>
+          <% if (data.type === 'Polo') { %>
+            <option selected>Polo</option>
+          <% } else { %>
+            <option>Polo</option>
+          <% } %>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="size">Size</label>
+        <select name="size" class="form-control" id="size">
+          <option disabled>--Select Size--</option>
+          <% if (data.size === 'S') { %>
+            <option selected>S</option>
+          <% } else { %>
+            <option>S</option>
+          <% } %>
+          <% if (data.size === 'M') { %>
+            <option selected>M</option>
+          <% } else { %>
+            <option>M</option>
+          <% } %>
+          <% if (data.size === 'L') { %>
+            <option selected>L</option>
+          <% } else { %>
+            <option>L</option>
+          <% } %>
+          <% if (data.size === 'XL') { %>
+            <option selected>XL</option>
+          <% } else { %>
+            <option>XL</option>
+          <% } %>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="stock">Stock</label>
+        <input value="<%= data.stock %>" name="stock" type="text" class="form-control" id="stock" placeholder="e.g: 12">
+        <small id="emailHelp" class="form-text text-muted">Fill stock amount from 0 to 100</small>
+      </div>
+      <button type="submit" class="btn btn-danger">Update Shirt</button>
+    </form>
+  </div>
+<%- include('partials/footer') %>
