@@ -1,4 +1,4 @@
-const db = require('./configs/connection');
+const db = require('./config/connection');
 const fs = require('fs');
 
 const insertShirtQuery = `

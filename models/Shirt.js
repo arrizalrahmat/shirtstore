@@ -1,4 +1,4 @@
-const db = require('../configs/connection');
+const db = require('../config/connection');
 
 class Shirt {
   constructor(id, name, type, size, stock) {

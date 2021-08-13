@@ -3,9 +3,9 @@ const { Pool } = require('pg');
 const pool = new Pool({
     host: 'localhost',
     port: 5432,
-    database: 'p1-livecode-w3',
+    database: 'shirtstore',
     user: 'postgres',
-    password: 'postgres',
+    password: 'l3montea',
     connectionTimeoutMillis: 5000,
     idleTimeoutMillis: 2000,
     max: 200,
