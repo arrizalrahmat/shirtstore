@@ -4,9 +4,7 @@ const shirtRouter = require('./shirtRouter');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('Hello World')
-});
+router.get('/', ShirtController.list);
 
 router.use('/shirts', shirtRouter);
 
