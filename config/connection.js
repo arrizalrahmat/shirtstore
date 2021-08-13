@@ -1,6 +1,6 @@
-const { Client } = require('pg');
+const { Pool } = require('pg');
 
-const client = new Client({
+const pool = new Pool({
     host: 'ec2-34-194-14-176.compute-1.amazonaws.com',
     port: 5432,
     database: 'dddc5slfjk0sj',
@@ -10,6 +10,5 @@ const client = new Client({
     idleTimeoutMillis: 2000,
     max: 200,
 });
-client.connect()
 
-module.exports = client;
+module.exports = pool;
