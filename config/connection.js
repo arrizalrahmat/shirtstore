@@ -10,6 +10,7 @@ const client = new Client({
     idleTimeoutMillis: 2000,
     max: 200,
     ssl: {
+        require: true,
         rejectUnauthorized: false
     }
 });
