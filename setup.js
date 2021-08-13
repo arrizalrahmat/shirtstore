@@ -13,6 +13,6 @@ CREATE TABLE shirts(
 db.query(creatShirtsTableQuery, (err, res) => {
     if (err) console.log(err);
     else console.log('Table Shirts successfully created!');
+    db.end();
 });
 
-db.end();
